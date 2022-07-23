@@ -47,7 +47,7 @@ class Student(Person):
     def __init__(self, first_name, last_name, dob):
         super().__init__(first_name, last_name, dob)
 
-        self.student_id = (f'Student_{uuid4()})
+        self.student_id = (f'Student_{uuid4()}')
 
 # This class must inherit from the Person class.
 # This class must have an additional attribute called student_id.
@@ -71,22 +71,11 @@ class PreK(Student):
 
 
 class Classroom():
-# Classroom class must have the following attributes:
-#
-# students - a container for students
-# instructors - a container for instructors
 
     students = []
     instructors = []
 
-# Classroom class must also have the following methods:
-#
-# add_instructor
-# remove_instructor
-# add_student
-# remove_student
-# print_instructors
-# print_students
+
     def add_instructor(self, instructor):
         self.instructors.append(Instructor)
         return self.instructors
@@ -96,7 +85,7 @@ class Classroom():
         return self.instructors
 
     def add_student(self, student):
-        self.students.appen(student)
+        self.students.append(student)
         return self.students
 
     def remove_student(self, student):

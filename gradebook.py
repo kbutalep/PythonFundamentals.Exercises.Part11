@@ -75,6 +75,10 @@ class Classroom():
 #
 # students - a container for students
 # instructors - a container for instructors
+
+    students = []
+    instructors = []
+
 # Classroom class must also have the following methods:
 #
 # add_instructor
@@ -83,5 +87,24 @@ class Classroom():
 # remove_student
 # print_instructors
 # print_students
+    def add_instructor(self, instructor):
+        self.instructors.append(Instructor)
+        return self.instructors
 
-pass
+    def remove_instructor(self, instructor):
+        self.instructors.remove(instructor)
+        return self.instructors
+
+    def add_student(self, student):
+        self.students.appen(student)
+        return self.students
+
+    def remove_student(self, student):
+        self.students.remove(student)
+        return self.students
+
+    def print_instructors(self):
+        print(self.instructors)
+
+    def print_students(self):
+        print(self.students)

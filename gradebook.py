@@ -44,22 +44,31 @@ class Instructor(Person):
 
 
 class Student(Person):
+    def __init__(self, first_name, last_name, dob):
+        super().__init__(first_name, last_name, dob)
+
+        self.student_id = (f'Student_{uuid4()})
+
 # This class must inherit from the Person class.
 # This class must have an additional attribute called student_id.
 # The student_id attribute must start with the string "Student_" followed by a UUID value.
 
-pass
-
 
 class ZipCodeStudent(Student):
+     def __init__(self, first_name, last_name, dob):
+         super().__init__(first_name, last_name, dob)
+
 # This class must inherit from the Student class.
 
-pass
+
 
 class PreK(Student):
+    def __init__(self, first_name, last_name, dob):
+        super().__init__(first_name, last_name, dob)
+
 # This class must inherit from the Student class.
 
-pass
+
 
 class Classroom():
 # Classroom class must have the following attributes:

@@ -5,20 +5,23 @@ class AliveStatus(Enum):
     ALIVE = 1
 
 class Person():
-# Person class must have the following attributes:
-#
-# first_name
-# last_name
-# dob (date of birth)
-# alive (of type AliveStatus)
-# Person class must also have the following methods:
-#
-# update_first_name
-# update_last_name
-# update_dob
-# update_status
+    def __init__(self,first_name, last_name, dob):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.dob = dob
 
-pass
+    def update_first_name(self, first_name):
+        self.first_name = first_name
+
+    def update_last_name(self, last_name):
+        self.last_name = last_name
+
+    def update_dob(self, dob):
+        self.dob = dob
+
+    def update_status(self, alive):
+        self.alive = alive
+
 
 class Instructor(Person):
 # This class must inherit from the Person class.
